@@ -17,3 +17,19 @@ p {
     margin: 0;
     padding: 0px 0px 0px 10px;
 }
+
+.vertical-video-page-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.vertical-video-iframe-wrapper {
+    flex-grow: 1;
+}
+
+.vertical-video-iframe {
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    min-height: 500px;
+}
