@@ -1,0 +1,81 @@
+[
+    {
+        "folder": "Edited By Me",
+        "folderImage": "assets/folder-edited-by-me.jpeg",
+        "pageLink": "edited-by-me.html",
+        "videos": [
+            {
+                "name": "chinatown social",
+                "link": "https://vimeo.com/1173787270?fl=tl&fe=ec"
+            },
+            {
+                "name": "quartets",
+                "link": "https://vimeo.com/1173787519?fl=tl&fe=ec"
+            }
+        ]
+    },
+    {
+        "folder": "Made By Me",
+        "folderImage": "assets/folder-made-by-me.jpeg",
+        "pageLink": "made-by-me.html",
+        "videos": [
+            {
+                "name": "rave promo",
+                "link": "https://vimeo.com/1173788054?fl=tl&fe=ec"
+            },
+            {
+                "name": "dinner party",
+                "link": "https://vimeo.com/1173787915?fl=tl&fe=ec"
+            },
+            {
+                "name": "band concert",
+                "link": "https://vimeo.com/1173787760?fl=tl&fe=ec"
+            }
+        ]
+    },
+    {
+        "folder": "Shot By Me",
+        "folderImage": "assets/folder-shot-by-me.jpeg",
+        "pageLink": "shot-by-me.html",
+        "videos": [
+            {
+                "name": "kevin",
+                "link": "https://vimeo.com/1173787210?fl=tl&fe=ec"
+            },
+            {
+                "name": "sound bowls",
+                "link": "https://vimeo.com/1173787240?fl=tl&fe=ec"
+            }
+    ]
+    },
+    {
+        "folder": "Production Design",
+        "folderImage": "assets/folder-production-design.jpeg",
+        "pageLink": "production-design.html",
+        "videos": [
+            {
+                "name": "production design",
+                "link": "https://vimeo.com/1173798000?fl=tl&fe=ec"
+            }
+        ]
+    },
+    {
+        "folder": "Made By AI",
+        "folderImage": "assets/folder-made-by-ai.jpeg",
+        "pageLink": "made-by-ai.html",
+        "videos": [
+            {
+                "name": "sea buckthorn",
+                "link": "https://vimeo.com/1173787754?fl=tl&fe=ec"
+            },
+            {
+                "name": "hair oil vid",
+                "link": "https://vimeo.com/1173787692?fl=tl&fe=ec"
+            },
+            {
+                "name": "baobab",
+                "link": "https://vimeo.com/1173787643?fl=tl&fe=ec"
+            }
+        ]
+    }
+  ]

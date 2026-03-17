@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Folder</title>
+  <link rel="stylesheet" href="folder.css">
+</head>
+<body>
+  <img class="background-image" src="/assets/background.jpg">
+  <h1 id="title"></h1>
+  <div id="videos" class="videos"></div>
+
+<script>
+function getFolderName() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('folder');
+}
+
+async function loadFolder() {
+  const folderName = getFolderName();
+
+  const response = await fetch('projects.json');
+  const folders = await response.json();
+
+  const folder = folders.find(f => f.folder === folderName);
+
+  if (!folder) {
+    document.getElementById('title').innerText = "Folder not found";
+    return;
+  }
+
+  document.getElementById('title').innerText = folder.folder;
+
+  const videosElement = document.getElementById('videos');
+
+  folder.videos.forEach(video => {
+    const wrapper = document.createElement('div');
+    wrapper.className = "video-wrapper";
+
+    const iframe = document.createElement('iframe');
+
+    iframe.src = video.link.replace("vimeo.com/", "player.vimeo.com/video/");
+    iframe.allow = "autoplay; fullscreen";
+    iframe.allowFullscreen = true;
+
+    wrapper.appendChild(iframe);
+    videosElement.appendChild(wrapper);
+  });
+}
+
+loadFolder();
+</script>
+
+</body>
+</html>

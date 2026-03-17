@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Rina</title>
-        <link rel="stylesheet" href="./style.css">
-        <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-        <header>
-            <title>Rini Bobini</title>
-        </header>
-        <main>
-            <h1>Katrina Peterson</h1>
-            <p>Hello welcome to my simple website. Here are my films. Email me at katrinapeterson501@gmail.com</p>
-            <ul>
-                <li><a href="./video4.html">fun rave dancey video</a></li>
-                <li><a href="./video1.html">fun dinner time video</a></li>
-                <li><a href="./video3.html">sexy jazz video</a></li>
-                <li><a href="./video5.html">indie boy band video</a></li>
-                <li><a href="./video2.html">production design portfolio</a></li>
-                <li><a href="./video6.html">sound bowl meditation vibes</a></li>
-                <li><a href="./video7.html">chinatown</a></li>
-                
-            </ul>
-        </main>    
-    </body>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img class="background-image" src="/assets/background.jpg">
+    <img class="logo-image" src="/assets/logo.jpeg">
+    <div id="folders" class="folders"></div>
+    <script>
+        async function loadProjects() {
+        const response = await fetch('projects.json');
+        const folders = await response.json();
+
+        const foldersElement = document.getElementById('folders');
+
+        for (let folderIndex = 0; folderIndex < folders.length; folderIndex++) {
+            const folder = folders[folderIndex];
+            
+            const folderElement = document.createElement('div');
+            folderElement.className = "folder";
+
+            const linkElement = document.createElement('a');
+            linkElement.href = `folder.html?folder=${encodeURIComponent(folder.folder)}`;
+
+            const imgElement = document.createElement('img');
+            imgElement.src = folder.folderImage;
+            imgElement.alt = folder.folder;
+
+            linkElement.appendChild(imgElement);
+            folderElement.appendChild(linkElement);
+
+            foldersElement.appendChild(folderElement);
+        }
+        }
+
+        loadProjects();
+    </script>
+
+</body>
 </html>
